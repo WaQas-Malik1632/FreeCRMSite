@@ -39,6 +39,9 @@ public class TestBase {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
+		else {
+			System.out.println("\n"+"You have entered Invalid Browser Name"+"\n");
+		}
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("url"));
