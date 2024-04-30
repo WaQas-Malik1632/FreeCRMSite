@@ -11,27 +11,32 @@ import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 
 public class TestUtil extends TestBase {
 	
+	 //for testdata
+/*	
+	static Workbook book;
+	 static Sheet sheet;
+	 
+	 */
+	 
+	//declare page load and implicit wait values and load them in base class
+	 public static long PAGE_LOAD_TIMEOUT =20;
+	 public static long IMPLICIT_WAIT=10;
+
+	 
+	
 	public TestUtil() throws IOException {
 		super();
 
 	}
 	
-	//declare page load and implicit wait values and load them in base class
-
-    public static long PAGE_LOAD_TIMEOUT =20;
-    public static long IMPLICIT_WAIT=10;
-
-    //for testdata
-    static Workbook book;
-    static Sheet sheet;
-
-    public static String TEST_DATA_SHEET_PATH="D:/Selenium Automation/FreeCRMTest/src/main/java/com/crm/qa/testdata/FreeCRMTestData.xlsx";
+  //  public static String TEST_DATA_SHEET_PATH="D:/Selenium Automation/FreeCRMTest/src/main/java/com/crm/qa/testdata/FreeCRMTestData.xlsx";
 
     //for switching to mainpanel frame
     public void switchtoframe() {
         driver.switchTo().frame("mainpanel");
     }
 
+ /*
     //for reading testdata
     public Object[][] getTestData(String sheetName) {
 
@@ -62,6 +67,7 @@ public class TestUtil extends TestBase {
 
         return data;
     }
+    */
 
 }
 

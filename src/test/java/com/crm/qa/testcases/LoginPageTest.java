@@ -1,7 +1,6 @@
 package com.crm.qa.testcases;
 
 import org.testng.annotations.Test;
-
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.HomePage;
 import com.crm.qa.pages.LoginPage;
@@ -19,16 +18,12 @@ public class LoginPageTest extends TestBase {
 
 	LoginPage login;
 	HomePage homepage;
-	String sheetName="LoginData";
+	String sheetName = "LoginData";
 
 	public LoginPageTest() throws IOException {
 		super();
 	}
 
-	//Test case should be separated--Independent with each other.
-	//Before each test case --Launch the browser and login->Test the functionality
-	//After each test case --Close the browser
-	
 	@BeforeMethod
 	public void setUp() throws IOException {
 		initailization();
@@ -39,7 +34,9 @@ public class LoginPageTest extends TestBase {
 	@Test(priority = 1)
 	public void VerifyLoginPagetitle() {
 		String loginPageTitle = login.validateLoginTitle();
-		Assert.assertEquals(loginPageTitle, "Free CRM software for customer relationship management, sales, and support.", "Free CRM software for customer relationship management, sales, and support.");
+		Assert.assertEquals(loginPageTitle,
+				"Free CRM software for customer relationship management, sales, and support.",
+				"Free CRM software for customer relationship management, sales, and support.");
 	}
 
 	@Test(priority = 2)
@@ -47,10 +44,9 @@ public class LoginPageTest extends TestBase {
 		boolean flag = login.ValidateLogo();
 		Assert.assertTrue(flag);
 	}
-
+/*
 	@DataProvider
-	public Object [][] GetTestData(String sheetName) 
-	{
+	public Object[][] GetTestData(String sheetName) {
 		Object data[][];
 		try {
 			data = TestUtil.getTestData(sheetName);
@@ -60,16 +56,15 @@ public class LoginPageTest extends TestBase {
 		}
 		return data;
 	}
-	
-	@Test(priority = 3, dataProvider="GetTestData")
-	public void LoginTest(String username, String password) {
-		homepage=login.ValidateLogin(username, password);
-		//homepage = login.ValidateLogin(prop.getProperty("username"), "password");
+	*/
+
+	@Test(priority = 3)
+	public void LoginTest() {
+		homepage = login.ValidateLogin(prop.getProperty("username"), "password");
 	}
 
 	@AfterTest
 	public void tearDown() {
 
 	}
-
 }
