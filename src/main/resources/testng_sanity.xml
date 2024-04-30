@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Sanity Suite-FreeCRM Site">
+  <test name="Testcase for FreeCRM Site">
+    <classes>
+      <class name="com.crm.qa.testcases.LoginPageTest"/>
+    </classes>
+  </test> <!-- testng.xml -->
+</suite> <!-- Suite -->
