@@ -22,9 +22,9 @@ public class HomePageTest extends TestBase {
 	public void beforeClass() throws IOException {
 		initailization();
 		testUtil=new TestUtil();
-	//	homepage = login.ValidateLogin(prop.getProperty("username"), "password");
+		homepage = login.ValidateLogin(prop.getProperty("username"), "password");
 		//both are same
-		homepage = login.ValidateLogin(prop.getProperty("username"), prop.getProperty("password"));
+	//	homepage = login.ValidateLogin(prop.getProperty("username"), prop.getProperty("password"));
 
 	}
 

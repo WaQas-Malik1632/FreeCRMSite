@@ -39,11 +39,11 @@ public class TestBase {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("url"));
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
 
 	}
 }
