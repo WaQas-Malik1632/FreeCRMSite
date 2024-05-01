@@ -8,7 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 import com.crm.qa.base.TestBase;
 
 public class LoginPage extends TestBase {
-	
 
 	@FindBy(xpath = "//input[@placeholder='Username']")
 	WebElement username;
@@ -29,7 +28,6 @@ public class LoginPage extends TestBase {
 	public LoginPage() throws IOException {
 		PageFactory.initElements(driver, this);
 	}
-	
 	public String validateLoginTitle() {
 		return driver.getTitle();
 	}
@@ -42,11 +40,8 @@ public class LoginPage extends TestBase {
 		username.sendKeys(Uname);
 		password.sendKeys(Pass);
 		Loginbtn.click();
-
         //After successfull login->it should return Homepage
 		return new HomePage();
-		
-
 	}
 
 }

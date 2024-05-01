@@ -21,8 +21,7 @@ public class TestBase {
 
 	public TestBase() throws IOException {
 		prop = new Properties();
-		FileInputStream ip = new FileInputStream(
-				"D:/Selenium Automation/FreeCRMTest/src/main/java/com/crm/qa/config/config.properties");
+		FileInputStream ip = new FileInputStream("D:/Selenium Automation/FreeCRMTest/src/main/java/com/crm/qa/config/config.properties");
 		prop.load(ip);
 	}
 
