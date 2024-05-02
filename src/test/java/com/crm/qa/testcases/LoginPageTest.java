@@ -54,13 +54,11 @@ public class LoginPageTest extends TestBase {
 
 	@Test(priority = 3)
 	public void LoginTest() {
-		homepage = login.ValidateLogin(prop.getProperty("username"), "password");
-		//both are same
-	//	homepage = login.ValidateLogin(prop.getProperty("username"), prop.getProperty("password"));
+		homepage = login.ValidateLogin(prop.getProperty("username"), prop.getProperty("password"));
 	}
 
 	@AfterMethod
 	public void tearDown() {
-	driver.close();
+
 	}
 }
