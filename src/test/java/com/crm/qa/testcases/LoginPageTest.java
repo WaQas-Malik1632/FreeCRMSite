@@ -13,7 +13,6 @@ public class LoginPageTest extends TestBase {
 
 	LoginPage login;
 	HomePage homepage;
-	String sheetName = "LoginData";
 
 	public LoginPageTest() throws IOException {
 		super();
@@ -38,22 +37,10 @@ public class LoginPageTest extends TestBase {
 		boolean flag = login.ValidateLogo();
 		Assert.assertTrue(flag);
 	}
-/*
-	@DataProvider
-	public Object[][] GetTestData(String sheetName) {
-		Object data[][];
-		try {
-			data = TestUtil.getTestData(sheetName);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return data;
-	}
-	*/
 
 	@Test(priority = 3)
-	public void LoginTest() {
+	public void LoginTest()
+	{
 		homepage = login.ValidateLogin(prop.getProperty("username"), prop.getProperty("password"));
 	}
 
